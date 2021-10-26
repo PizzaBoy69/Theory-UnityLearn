@@ -6,6 +6,8 @@ using TMPro;
 public class MenuMain : MonoBehaviour
 {
     public TextMeshProUGUI playerNameText;
+    public TextMeshProUGUI buildingsScoreText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,6 @@ public class MenuMain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        buildingsScoreText.text = "Building Score: " + 
     }
 }
