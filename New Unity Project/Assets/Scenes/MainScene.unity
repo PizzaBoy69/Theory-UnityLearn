@@ -428,11 +428,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 183188281}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d996d1b568a4a846a843d5e794a95dc, type: 3}
+  m_Script: {fileID: 11500000, guid: bf7cb952aeb43544bbb7deadd643bcde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitOfProduction: 1
+  unitOfProduction: 0
   totalProduction: 0
+  prodRate: 1
 --- !u!1 &193579790
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +820,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNameText: {fileID: 2018790800}
+  buildingsScoreText: {fileID: 112500537}
+  buildingScript: {fileID: 0}
 --- !u!1 &1720493799
 GameObject:
   m_ObjectHideFlags: 0

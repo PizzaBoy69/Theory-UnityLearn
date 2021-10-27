@@ -6,15 +6,14 @@ public class Building : MonoBehaviour
 {
     public int unitOfProduction;
     public int totalProduction = 0;
-    private float prodRate = 1f;
+    public float prodRate = 1f;
     private float checkRate = 0f;
 
     // Start is called before the first frame update
     private void Update()
     {
-        Producing();
     }
-    private void Producing()
+    public virtual void Producing()
     {
         if (Time.time > checkRate)
         {
