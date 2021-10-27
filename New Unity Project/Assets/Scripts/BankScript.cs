@@ -13,12 +13,7 @@ public class BankScript : Building
     // Update is called once per frame
     void Update()
     {
-        Producing();
     }
 
-    public override void Producing()
-    {
-        unitOfProduction = 2;
-        base.Producing();
-    }
+
 }

@@ -19,6 +19,5 @@ public class MenuMain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        buildingsScoreText.text = "Buildings Score: " + buildingScript.totalProduction;
     }
 }

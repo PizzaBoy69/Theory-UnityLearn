@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
-    public int unitOfProduction;
-    public int totalProduction = 0;
-    public float prodRate = 1f;
-    private float checkRate = 0f;
+    private UserControl2 userControl2Script;
+    private string buildingName;
 
-    // Start is called before the first frame update
-    private void Update()
+    private void Start()
     {
+        userControl2Script = GameObject.Find("Selection Tool").GetComponent<UserControl2>();
     }
-    public virtual void Producing()
+
+    public virtual void printBuilding()
     {
-        if (Time.time > checkRate)
-        {
-            checkRate = Time.time + prodRate;
-            totalProduction += unitOfProduction;
-        }
+        var meno = gameObject.name;
+        if (meno = userControl2Script.objectName) { }
+        Debug.Log("Selected building is: " + buildingName);
     }
+
 }
