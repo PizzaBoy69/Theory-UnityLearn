@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class UserControl2 : MonoBehaviour
 {
-    [SerializeField] private string selectableTag = "selectableTag";
-    [SerializeField] private Material highlightMaterial;
+    [SerializeField] private string selectableTag = "selectableTag"; // ENCAPSULATION
+    [SerializeField] private Material highlightMaterial; // ENCAPSULATION
     private Material originalMaterial;
 
-    public static bool isSelected { get; private set; }
-    public static string selectedName { get; private set; }
+    public static bool isSelected { get; private set; } // ENCAPSULATION
+    public static string selectedName { get; private set; } // ENCAPSULATION
     private Transform _selection;
 
     // Update is called once per frame

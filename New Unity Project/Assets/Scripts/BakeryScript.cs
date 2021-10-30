@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BakeryScript : Building
+public class BakeryScript : Building // INHERITANCE
 {
     // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            printBuilding();
+            printBuilding(); // ABSTRACTON
         }
     }
 
-    public override void printBuilding()
+    public override void printBuilding() // POLYMORPHISM
     {
         if (UserControl2.selectedName == gameObject.name)
         {
