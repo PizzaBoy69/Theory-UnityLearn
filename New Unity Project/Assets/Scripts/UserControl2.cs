@@ -7,15 +7,10 @@ public class UserControl2 : MonoBehaviour
     [SerializeField] private string selectableTag = "selectableTag";
     [SerializeField] private Material highlightMaterial;
     private Material originalMaterial;
-    public string objectName; 
 
+    public static bool isSelected { get; private set; }
+    public static string selectedName { get; private set; }
     private Transform _selection;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -30,6 +25,7 @@ public class UserControl2 : MonoBehaviour
             var selectionRenderer = _selection.GetComponent<Renderer>();
             selectionRenderer.material = originalMaterial;
             _selection = null;
+            isSelected = false;
         }
         
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -47,7 +43,8 @@ public class UserControl2 : MonoBehaviour
                     selectionRenderer.material = highlightMaterial;
                 }
                 _selection = selection;
-                objectName = selection.name;
+                isSelected = true;
+                selectedName = hit.collider.name;
             }
             Debug.DrawLine(ray.origin, hit.point);
         }

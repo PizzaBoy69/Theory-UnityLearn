@@ -4,19 +4,12 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
-    private UserControl2 userControl2Script;
-    private string buildingName;
-
-    private void Start()
-    {
-        userControl2Script = GameObject.Find("Selection Tool").GetComponent<UserControl2>();
-    }
-
+    public static string objectName { get; private set; }
     public virtual void printBuilding()
     {
-        var meno = gameObject.name;
-        if (meno = userControl2Script.objectName) { }
-        Debug.Log("Selected building is: " + buildingName);
+        objectName = gameObject.name;
+        Debug.Log("Selected building is: " + objectName);
+        
     }
 
 }
